@@ -1,10 +1,18 @@
-const foo = () => {}
+class Element{
+    addEventListener(eventName:string,listener:Function){}
+    removeEventListener(listener:Function){}
+}
+const main = ()=>{
+    const e = new Element();
+    e.addEventListener('load',main);
 
-const bar = () => {}
+}
+const main2 = ()=>{
+    const e = new Element();
 
-const fooBar = () => {}
+    // removeEventListener @ (.,16)
+    e.addEventListener('load',main2);
 
-
-foo()
-bar()
-fooBar()
+    e.removeEventListener(main2)
+}
+main();

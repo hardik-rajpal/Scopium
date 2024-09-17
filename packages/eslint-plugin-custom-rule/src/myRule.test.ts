@@ -1,6 +1,6 @@
 import { RuleTester } from '@typescript-eslint/rule-tester';
 
-import myRule from './myRule';
+import {myRule} from './myRule';
 
 const parserResolver = require.resolve('@typescript-eslint/parser');
 

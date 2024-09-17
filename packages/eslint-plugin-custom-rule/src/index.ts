@@ -1,6 +1,14 @@
 import { TSESLint } from '@typescript-eslint/utils';
-import myRule from './myRule';
+import * as myRules from './myRule';
 
-export const rules = {
-  'my-rule': myRule,
-} satisfies Record<string, TSESLint.RuleModule<string, Array<unknown>>>;
+let myRulesTyped = myRules as Record<string, TSESLint.RuleModule<string, Array<unknown>>>
+const rules = {
+  
+} as Record<string, TSESLint.RuleModule<string, Array<unknown>>>;
+for(let key of Object.keys(myRulesTyped)){
+  const rule = myRulesTyped[key];
+  if(rule){
+    rules[key] = rule;
+  }
+}
+export {rules};

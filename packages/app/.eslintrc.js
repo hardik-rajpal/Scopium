@@ -13,6 +13,6 @@ module.exports = {
   },
   plugins: ['custom-rule'],
   rules: {
-    'custom-rule/my-rule': 'error'
+    'custom-rule/myRule': 'error'
   },
 };
