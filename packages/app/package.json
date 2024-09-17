@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "private": true,
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-custom-rule": "workspace:*",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts ./src"
+  }
+}
